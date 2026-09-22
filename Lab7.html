@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 7: Masonry</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            height: 100vh;
+        }
+        .Left {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90px;
+            background-color: orange;
+            padding-left: 25px;
+            padding-right: 25px;
+            overflow-y: auto;
+        }
+        p{
+            font-size: xx-large;
+        }
+        #trash {
+            align-self: center;
+            margin-top: auto;
+        }
+        .Right {
+            display: flex;
+            flex-wrap: wrap;
+            flex-grow: 1;
+            overflow-y: auto;
+            background-color: #837fc3;
+            align-content: flex-start;
+            box-sizing: border-box;
+        }
+        img {
+            height: 100px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            border: 4px solid #fcfbfb;
+        }
+    </style>
+</head>
+<body>
+    <div class="Left">
+        <p>&#x1F4F7;</p>
+        <p>&#x1F5C4;&#xfe0f;</p>
+        <p>&#x2764;&#xfe0f;</p>
+        <p id="trash">&#x1F5D1;&#xfe0f;</p>
+    </div>
+    <div class="Right">
+        <img src="https://picsum.photos/150/100" alt="">
+        <img src="https://picsum.photos/300/100" alt="">
+        <img src="https://picsum.photos/200/100" alt="">
+        <img src="https://picsum.photos/100/100" alt="">
+        <img src="https://picsum.photos/222/100" alt="">
+        <img src="https://picsum.photos/150/100" alt="">
+        <img src="https://picsum.photos/100/100" alt="">
+        <img src="https://picsum.photos/200/100" alt="">
+        <img src="https://picsum.photos/400/100" alt="">
+        <img src="https://picsum.photos/300/100" alt="">
+        <img src="https://picsum.photos/255/100" alt="">
+        <img src="https://picsum.photos/220/100" alt="">
+        <img src="https://picsum.photos/155/100" alt="">
+        <img src="https://picsum.photos/350/100" alt="">
+        <img src="https://picsum.photos/375/100" alt="">
+        <img src="https://picsum.photos/280/100" alt="">
+        <img src="https://picsum.photos/120/100" alt="">
+        <img src="https://picsum.photos/125/100" alt="">
+        <img src="https://picsum.photos/205/100" alt="">
+        <img src="https://picsum.photos/230/100" alt="">
+        <img src="https://picsum.photos/315/100" alt="">
+    </div>
+</body>
+</html>
