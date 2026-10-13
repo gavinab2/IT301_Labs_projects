@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10 : Tip Calculator</title>
+</head>
+<body>
+    <script>
+        let message= "Enter total restaurant bill amount:";
+        let bill;
+        let input;
+        let isValid = false;
+        let tip;
+
+        do {
+            input = prompt(message);
+            bill = Number(input);
+
+            if (input === null || bill=== 0) {
+                message = "Please enter a bill amount greater than 0.";
+            }
+            else if (isNaN(bill)) {
+                message = "Please enter a valid numerical amount.";
+            }
+            else if (bill < 0) {
+                message = "Please enter a postive numerical bill amount";
+            }
+            else {
+                isValid = true;
+            }
+            
+        } while (!isValid);
+
+        tip = bill * 0.2;
+        document.write("Your tip should be : $");
+        document.write(tip);
+    </script>
+</body>
+</html>
