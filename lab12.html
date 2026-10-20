@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 12</title>
+</head>
+<body>
+
+<form id="mathform" action="#">
+<label for="Name">What is your Name?</label>
+<input type="text" id="Name"> <br><br>
+<button id="bttn" type="button"> Submit</button>
+
+<p id="nameResult"></p>
+
+
+
+
+<label for="number1">What is your first number?</label>
+<input type="number" id="number1"> <br><br>
+
+
+<label for="number2">What is your second number?</label>
+<input type="number" id="number2"> <br><br>
+
+
+
+
+
+
+<p>What operation do you wanna do?</p>
+<input type="radio" name="math" value="Addition"> Add <br>
+<input type="radio" name="math" value="Subtraction"> Subtract <br>
+<input type="radio" name="math" value="Mult"> Multiply <br>
+<input type="radio" name="math" value="Division"> Divide <br><br>
+
+<button id="calc" type="button"> Calculate</button>
+<button id="clear" type="button"> Clear</button>
+</form>
+
+
+
+<p id="result"></p>
+
+
+
+
+    <script>
+    const name = document.getElementById('Name');
+    const nameResult = document.getElementById('nameResult');
+
+    document.getElementById('bttn').addEventListener('click', function(){
+      nameResult.textContent = 'Hello ' + name.value;
+    });
+
+    const num1 = document.getElementById('number1');
+    const num2 = document.getElementById('number2');
+    const result = document.getElementById('result');
+    const mathform = document.getElementById('mathform');
+
+    const Add = function(a, b) {return a + b;};
+    const Sub = function(a, b) {return a - b;};
+    const Mult = function(a, b) {return a * b;};
+    const Divide = function(a, b) {return a / b;};
+
+    document.getElementById('calc').addEventListener('click', function(){
+      const operation = document.querySelector('[name = math]:checked');
+      const val1 = Number(num1.value);
+      const val2 = Number(num2.value);
+
+      if (operation.value === 'Addition') {
+        result.textContent = Add(val1, val2);
+      }
+      if (operation.value === 'Subtraction') {
+        result.textContent = Sub(val1, val2);
+      }
+      if (operation.value === 'Mult') {
+        result.textContent = Mult(val1, val2);
+      }
+      if (operation.value === 'Division') {
+        result.textContent = Divide(val1, val2);
+      }
+    });
+
+    document.getElementById('clear').addEventListener('click', function(){
+    name.value = '';
+    num1.value = '';
+    num2.value = '';
+    nameResult.textContent = '';
+    result.textContent = '';
+    });
+    </script>
+</body>
+</html>
