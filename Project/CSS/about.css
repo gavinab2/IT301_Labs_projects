@@ -1,0 +1,230 @@
+.about_header {
+  text-align: center;
+  padding: 80px 20px;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.about_header h1 {
+   font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.about_header p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  margin: 0;
+}
+
+
+
+
+
+.bio_section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  max-width: 850px;
+  flex-wrap: wrap;
+}
+
+.bio_image {
+  position: relative;
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 3px solid #9066f3;
+  height: 500px;
+}
+
+.bio_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bio_text {
+  flex: 1;
+  min-width: 300px;
+  max-width: 550px;
+  text-align: left;
+}
+
+.bio_text h2 {
+  font-size: 2.2rem;
+  color: #111111;
+  margin-bottom: 20px;
+}
+
+.bio_text p {
+  font-size: 1.05rem;
+  color: #444444;
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Bigger Screens */
+@media (min-width: 1500px) {
+  .about_header {
+    max-width: 1400px;
+    padding: 100px 20px;
+  }
+
+  .bio_section {
+    max-width: 1100px;
+    gap: 70px;
+  }
+
+  .bio_image {
+    max-width: 500px;
+    height: 560px;
+  }
+
+  .bio_text {
+    max-width: 600px;
+  }
+
+  .bio_text h2 {
+    font-size: 2.5rem;
+  }
+
+  .bio_text p {
+    font-size: 1.15rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablets */
+@media (max-width: 768px) {
+  .about_header {
+    padding: 60px 20px;
+    margin-bottom: 40px;
+  }
+
+  .about_header h1 {
+    font-size: 2.4rem;
+  }
+
+  .about_header p {
+    font-size: 1.05rem;
+  }
+
+  .bio_section {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .bio_image {
+    width: 100%;
+    max-width: 400px;
+    height: 420px;
+    flex: none;
+  }
+
+  .bio_text {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    flex: none;
+  }
+
+  .bio_text h2 {
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* phones */
+@media (max-width: 480px) {
+  .about_header {
+    padding: 40px 15px;
+    margin-bottom: 30px;
+  }
+
+  .about_header h1 {
+    font-size: 2rem;
+  }
+
+  .about_header p {
+    font-size: 1rem;
+  }
+
+  .bio_section {
+    gap: 25px;
+  }
+
+  .bio_image {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 350px;
+    box-sizing: border-box;
+  }
+
+  .bio_text {
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 5px;
+    box-sizing: border-box;
+  }
+
+  .bio_text h2 {
+    font-size: 1.6rem;
+  }
+
+  .bio_text p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}

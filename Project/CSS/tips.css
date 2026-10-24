@@ -1,0 +1,350 @@
+.tips_header {
+  text-align: center;
+  padding: 80px 20px;
+  width: 100%;
+  max-width: 1200px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+}
+
+.tips_header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.tips_header p {
+  font-size: 1.2rem;
+  color: #b0b0b0;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+
+
+
+
+
+
+
+
+.tips_section {
+  width: 100%;
+  max-width: 1100px;
+  margin-bottom: 60px;
+}
+
+.tips_section h2 {
+  font-size: 2rem;
+  color: #111111;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.tips_grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.tip_card {
+  flex: 1 1 280px;
+  max-width: 350px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.tip_card:hover {
+  transform: translateY(-5px);
+  border-color: #9066f3;
+}
+
+.tip_tag {
+  background-color: #f7f3ff;
+  color: #9066f3;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 12px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tip_card h3 {
+  font-size: 1.35rem;
+  color: #111111;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.tip_card p {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prep_section {
+  width: 100%;
+  max-width: 900px;
+  background-color: #f9f9f9;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 50px 40px;
+  box-sizing: border-box;
+}
+
+.prep_section h2 {
+  font-size: 2rem;
+  color: #111111;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.prep_list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.prep_item {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 6px;
+  border-left: 4px solid #9066f3;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.prep_item h3 {
+  font-size: 1.2rem;
+  color: #111111;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.prep_item p {
+  font-size: 1rem;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Big Screens */
+@media (min-width: 1500px) {
+  .tips_header {
+    max-width: 1400px;
+  }
+
+  .tips_section {
+    max-width: 1300px;
+  }
+
+  .tips_grid {
+    gap: 30px;
+  }
+
+  .tip_card {
+    max-width: 400px;
+  }
+
+  .prep_section {
+    max-width: 1050px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Tablets */
+@media (max-width: 768px) {
+  .tips_header {
+    padding: 60px 20px;
+    margin-bottom: 40px;
+  }
+
+  .tips_header h1 {
+    font-size: 2.3rem;
+  }
+
+  .tips_header p {
+    font-size: 1.05rem;
+  }
+
+  .tips_section {
+    margin-bottom: 45px;
+  }
+
+  .tips_section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+  }
+
+  .tips_grid {
+    gap: 20px;
+  }
+
+  .tip_card {
+    flex: 1 1 240px;
+    max-width: 340px;
+    padding: 25px 20px;
+  }
+
+  .prep_section {
+    padding: 35px 25px;
+  }
+
+  .prep_section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 25px;
+  }
+
+  .prep_list {
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+
+  .prep_item {
+    padding: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* phones */
+@media (max-width: 480px) {
+  .tips_header {
+    padding: 40px 15px;
+    margin-bottom: 30px;
+  }
+
+  .tips_header h1 {
+    font-size: 1.9rem;
+    letter-spacing: 1px;
+  }
+
+  .tips_header p {
+    font-size: 1rem;
+  }
+
+  .tips_section {
+    margin-bottom: 35px;
+  }
+
+  .tips_section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .tips_grid {
+    gap: 15px;
+  }
+
+  .tip_card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    padding: 20px 15px;
+  }
+
+  .tip_card h3 {
+    font-size: 1.2rem;
+  }
+
+  .prep_section {
+    padding: 25px 15px;
+  }
+
+  .prep_section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .prep_list {
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .prep_item {
+    padding: 18px 15px;
+  }
+
+  .prep_item h3 {
+    font-size: 1.1rem;
+  }
+}

@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 12px;
+  background-color: #121212;
+  height: 100vh;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+}
+
+.gallery img {
+  height: auto;
+  max-height: 300px;
+  width: auto;
+  flex-grow: 0;
+  border-radius: 6px;
+  border: solid;
+  border-radius: 20px;
+}
+
+img:hover {
+  transform: scale(120%);
+  transition: transform 0.3s ease;
+  border: solid 3px black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Big Screens */
+@media (min-width: 1500px) {
+  body {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .gallery {
+    gap: 18px;
+  }
+
+  .gallery img {
+    max-height: 380px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+/* Tablets */
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 12px;
+    background-color: #121212;
+    min-height: 100vh;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .gallery img {
+    height: auto;
+    max-height: 260px;
+    width: auto;
+    max-width: 48%;
+    flex-grow: 0;
+    border: solid;
+    border-radius: 20px;
+  }
+
+  img:hover {
+    transform: scale(105%);
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Phones */
+@media (max-width: 480px) {
+  body {
+    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 10px;
+    min-height: 100vh;
+  }
+
+  .gallery {
+    gap: 15px;
+    width: 100%;
+  }
+
+  .gallery img {
+    height: auto;
+    max-height: none;
+    width: 100%;
+    max-width: 100%;
+    flex-grow: 1;
+    border: solid;
+    border-radius: 20px;
+  }
+
+  img:hover {
+    transform: scale(102%);
+  }
+}
