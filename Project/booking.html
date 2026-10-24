@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aperture Alex - Booking</title>
+    <link rel="stylesheet" href="CSS/Header_and_Footer.css">
+    <link rel="stylesheet" href="CSS/booking.css">
+</head>
+
+
+
+
+
+<body>
+
+<!-- Nav Bar / Header -->
+    <header class="site_header">
+        <div class="logo">
+            <a href="index.html">Aperture Alex</a>
+        </div>
+        <nav class="nav_links">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="tips.html">Photography Tips</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
+<!-- The first section that stands out with the main text of the page -->
+
+
+    <main class="main_content">
+
+        <section class="booking_header">
+            <h1>Book a Session</h1>
+            <p>Select your session duration below, then fill out the form to reserve your spot.</p>
+        </section>
+
+
+
+
+<!-- The pricing selection chart thing -->
+
+        <section class="pricing_section">
+            <h2>Select Session Duration</h2>
+            <div class="pricing_grid">
+                <div class="price_card" onclick="selectDuration('1 Hour', '$50', this)">
+                    <h3>30 min</h3>
+                    <p class="price">$50</p>
+                </div>
+                <div class="price_card" onclick="selectDuration('2 Hours', '$100', this)">
+                    <h3>1 Hours</h3>
+                    <p class="price">$100</p>
+                </div>
+                <div class="price_card" onclick="selectDuration('4 Hours', '$250', this)">
+                    <h3>3 Hours</h3>
+                    <p class="price">$250</p>
+                </div>
+            </div>
+        </section>
+
+
+
+
+<!-- The form to put in your info -->
+
+        <section class="form_section">
+            <h2>Session Inquiry Form</h2>
+            <form class="booking_form">
+                <div class="form_group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                </div>
+
+                <div class="form_group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+
+
+                <input type="hidden" id="hidden_duration" name="selected_duration" value="">
+
+                <div class="form_group">
+                    <label for="session_type">Session Type</label>
+                    <select id="session_type" name="session_type" required>
+                        <option value="" disabled selected>Select session type</option>
+                        <option value="graduation">Graduation Portraits</option>
+                        <option value="action">Action / Event Coverage</option>
+                        <option value="portrait">Individual Portrait Shoot</option>
+                        <option value="other">Other Creative Project</option>
+                    </select>
+                </div>
+
+                <div class="form_group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+
+                <div class="form_group">
+                    <label for="message">Project Details / Vision</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your location ideas or what you're looking for..."></textarea>
+                </div>
+
+                <div class="form_actions_row">
+                    <div id="cost_estimate_display" class="cost_estimate_box" style="display: none;">
+                        <span id="estimate_label">Cost Estimate:</span>
+                        <strong id="estimate_price">$0</strong>
+                    </div>
+                    <button type="submit" class="submit_btn">Send Inquiry</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+
+
+
+
+
+    <footer>
+        <p>&copy; 2026 Alex Gavin Photography. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+    <script>
+        function selectDuration(durationText, priceText, element) {
+            const cards = document.querySelectorAll('.price_card');
+
+            
+            document.getElementById('estimate_label').textContent = 'Cost Estimate (' + durationText + '):';
+
+            document.getElementById('estimate_price').textContent = priceText;
+
+            document.getElementById('hidden_duration').value = durationText + ' - ' + priceText;
+
+            cards.forEach(card => card.classList.remove('selected'));
+
+
+
+            element.classList.add('selected');
+
+            const estimateBox = document.getElementById('cost_estimate_display');
+
+            estimateBox.style.display = 'flex';
+
+
+        }
+    </script>
+
+
+
+
+</body>
+</html>
