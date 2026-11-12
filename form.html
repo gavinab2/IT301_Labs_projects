@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 16</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+        .invalid {
+            color: red;
+        }
+        .valid {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lab 16 Form</h1>
+    <form id="myForm">
+        <input type="text" id = "name" placeholder="Name" required > 
+        <input type="email" id = "email" placeholder="Email" required> 
+        <input type="password" id = "password" placeholder="Password" required> 
+        <section id="passwordRules" class="hidden">
+            <p id="rule1" class="invalid"> At least 6 characters </p>
+            <p id="rule2" class="invalid"> Must include a special character (!@#$...) </p>
+            <p id="rule3" class="invalid"> Must include an uppercase letter (A-Z) </p>
+        </section>
+        <button id="submitBtn">Submit</button>
+    </form>
+
+    <script>
+        const name = document.getElementById('name');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const submit = document.getElementById('submitBtn');
+        const myForm = document.getElementById('myForm');
+        const passwordRules = document.getElementById('passwordRules');
+        const rule1 = document.getElementById('rule1');
+        const rule2 = document.getElementById('rule2');
+        const rule3 = document.getElementById('rule3');
+
+        myForm.addEventListener('submit', ()=> { 
+            event.preventDefault();
+            window.location.href = "success.html";
+        })
+
+        password.addEventListener('input', ()=> { 
+            passwordRules.classList.toggle("hidden", false);
+            
+            let passwordValue = password.value;
+            let length = passwordValue.length >= 6;
+            let specialChar = /[!@#$%^&*(),.?":{}|<>]/.test(passwordValue);
+            let upper = /[A-Z]/.test(passwordValue);
+
+            rule1.classList.toggle("valid", length);
+            rule1.classList.toggle("invalid", !length);
+
+            rule2.classList.toggle("valid", specialChar);
+            rule2.classList.toggle("invalid", !specialChar);
+
+            rule3.classList.toggle("valid", upper);
+            rule3.classList.toggle("invalid", !upper);
+        })
+    </script>
+</body>
+</html>
